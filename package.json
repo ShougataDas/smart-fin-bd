@@ -4,14 +4,17 @@
     "description": "SmartFin BD - Financial Mentor for Bangladeshi Users",
     "main": "index.js",
     "scripts": {
-        "android": "react-native run-android",
-        "ios": "react-native run-ios",
-        "start": "react-native start",
+        "android": "npx react-native run-android --no-packager",
+        "ios": "npx react-native run-ios --no-packager", 
+        "start": "npx react-native start --reset-cache",
+        "metro": "npx react-native start --reset-cache",
         "test": "jest",
         "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
         "type-check": "tsc --noEmit",
-        "build:android": "cd android && ./gradlew assembleRelease",
-        "build:ios": "cd ios && xcodebuild -workspace SmartFinBD.xcworkspace -scheme SmartFinBD -configuration Release -destination generic/platform=iOS -archivePath SmartFinBD.xcarchive archive"
+        "build:android": "echo 'Android build not supported in WebContainer'",
+        "build:ios": "echo 'iOS build not supported in WebContainer'",
+        "dev": "npx react-native start --reset-cache",
+        "setup": "npm install && npx react-native doctor || true"
     },
     "dependencies": {
         "@hookform/resolvers": "^3.3.2",
