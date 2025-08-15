@@ -1,0 +1,64 @@
+{
+    "extends": "@tsconfig/react-native/tsconfig.json",
+    "compilerOptions": {
+        "target": "ES2020",
+        "lib": [
+            "ES2020",
+            "DOM"
+        ],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "baseUrl": "./src",
+        "paths": {
+            "@/*": [
+                "*"
+            ],
+            "@components/*": [
+                "components/*"
+            ],
+            "@screens/*": [
+                "screens/*"
+            ],
+            "@services/*": [
+                "services/*"
+            ],
+            "@store/*": [
+                "store/*"
+            ],
+            "@types/*": [
+                "types/*"
+            ],
+            "@utils/*": [
+                "utils/*"
+            ],
+            "@constants/*": [
+                "constants/*"
+            ],
+            "@hooks/*": [
+                "hooks/*"
+            ],
+            "@assets/*": [
+                "../assets/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*",
+        "index.js",
+        "App.tsx"
+    ],
+    "exclude": [
+        "node_modules",
+        "android",
+        "ios"
+    ]
+}
